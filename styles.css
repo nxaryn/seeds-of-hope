@@ -28,9 +28,9 @@
     --max-width: 1100px;
     --header-height: 80px;
 
-    --radius-sm: 8px;
-    --radius-md: 14px;
-    --radius-lg: 22px;
+    --radius-sm: 2px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
 
     --font-heading: "Limelight", sans-serif;
     --font-body: "Playpen Sans", sans-serif;
@@ -1086,6 +1086,37 @@ small {
         width: 40px;
         height: 40px;
     }
+}
+
+.section-breaker,
+.subsection-breaker {
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.section-breaker svg {
+    display: block;
+    width: 100%;
+    height: 40px;
+    fill: none;
+    stroke: var(--border);
+    stroke-width: 1;
+}
+
+.subsection-breaker {
+    margin: 35px 0;
+}
+
+.subsection-breaker svg {
+    display: block;
+    width: min(600px, 70%);
+    height: 20px;
+    margin: 0 auto;
+    fill: none;
+    stroke: var(--border);
+    stroke-width: 1;
+    opacity: 0.65;
 }
 
 @media (prefers-reduced-motion: reduce) {
