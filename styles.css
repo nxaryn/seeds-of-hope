@@ -39,7 +39,7 @@
     --transition: 250ms ease;
     --transition-slow: 500ms ease;
 
-    --hero-image: url("../assets/images/hero.jpg");
+    --hero-image: url("../assets/images/hero.png");
 
     --nox-background: #050505;
     --nox-surface: #0b0b0b;
