@@ -89,9 +89,6 @@ body {
     font-family: var(--font-body);
     font-weight: 400;
     line-height: 1.6;
-
-    /* Remove this if you want the normal cursor.
-       cursor: none; */
 }
 
 body::before {
@@ -314,6 +311,48 @@ small {
     transform: scaleX(1);
 }
 
+.nav-bar-link-active {
+    position: relative;
+
+    padding: 15px 15px;
+
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 800;
+
+    border-radius: var(--radius-sm);
+
+    transition:
+        color var(--transition),
+        background var(--transition);
+}
+
+.nav-bar-link-active::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 5px;
+
+    height: 1px;
+
+    background: var(--primary-light);
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform var(--transition);
+}
+
+.nav-bar-link-active:hover {
+    color: var(--accent);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-bar-link-active:hover::before {
+    transform: scaleX(1);
+}
+
 /* Hero */
 
 .hero {
@@ -497,6 +536,83 @@ small {
     will-change: transform;
 }
 
+.section-subtitle {
+    max-width: 700px;
+    margin-bottom: 35px;
+
+    color: var(--primary-light);
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+.bullet {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+
+    color: var(--text-muted);
+    list-style: none;
+}
+
+.bullet::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+
+    width: 6px;
+    height: 6px;
+
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(81, 255, 0, 0.35);
+}
+
+.ref-link {
+    display: block;
+    width: fit-content;
+
+    position: relative;
+    padding: 15px 15px;
+
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 800;
+
+    border-radius: var(--radius-sm);
+
+    transition:
+        color var(--transition),
+        background var(--transition);
+}
+
+.ref-link::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 5px;
+
+    height: 1px;
+
+    background: var(--primary-light);
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform var(--transition);
+}
+
+.ref-link:hover {
+    color: var(--accent);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.ref-link-active:hover::before {
+    transform: scaleX(1);
+}
+
+
 /* Definition section */
 
 .definition-content {
@@ -597,6 +713,22 @@ small {
 .grid {
     display: grid;
     gap: 20px;
+}
+
+.grid--1 {
+    grid-template-columns: repeat(1, 1fr);
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+    width: 1500px;
+    margin: 0 auto;
+}
+
+.grid--3 {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .grid--4 {
@@ -953,16 +1085,28 @@ small {
     transform: translateY(0);
 }
 
+.reveal:nth-child(1) {
+    transition-delay: 0s;
+}
+
 .reveal:nth-child(2) {
-    transition-delay: 0.5s;
+    transition-delay: 0.25s;
 }
 
 .reveal:nth-child(3) {
-    transition-delay: 1s;
+    transition-delay: 0.5s;
 }
 
 .reveal:nth-child(4) {
-    transition-delay: 1.5s;
+    transition-delay: 0.75s;
+}
+
+.reveal:nth-child(5) {
+    transition-delay: 1s;
+}
+
+.reveal:nth-child(6) {
+    transition-delay: 1.25s;
 }
 
 /* Scrollbar */
