@@ -39,7 +39,10 @@
     --transition: 250ms ease;
     --transition-slow: 500ms ease;
 
-    --hero-image: url("../assets/images/hero.png");
+    --home-hero-image: url("./assets/images/home/hero.png");
+    --solutions-hero-image: url("./assets/images/solutions/hero.png");
+    --country-hero-image: url("./assets/images/country/hero.png");
+    --challenges-hero-image: url("./assets/images/challenges/hero.png");
 
     --nox-background: #050505;
     --nox-surface: #0b0b0b;
@@ -366,14 +369,13 @@ small {
     isolation: isolate;
 }
 
-.hero-background {
+.home-hero-background {
     position: absolute;
-    top: -10%;
-    left: 0;
+    inset: 0;
     z-index: -2;
 
     width: 100%;
-    height: 120%;
+    height: 100%;
 
     background-image:
         linear-gradient(
@@ -382,13 +384,74 @@ small {
             rgba(7, 9, 8, 0.78) 45%,
             rgba(7, 9, 8, 0.45) 100%
         ),
-        var(--hero-image);
+        var(--home-hero-image);
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+.challenges-hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
 
-    will-change: transform;
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(7, 9, 8, 0.98) 0%,
+            rgba(7, 9, 8, 0.78) 45%,
+            rgba(7, 9, 8, 0.45) 100%
+        ),
+        var(--challenges-hero-image);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.solutions-hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(7, 9, 8, 0.98) 0%,
+            rgba(7, 9, 8, 0.78) 45%,
+            rgba(7, 9, 8, 0.45) 100%
+        ),
+        var(--solutions-hero-image);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.country-hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(7, 9, 8, 0.98) 0%,
+            rgba(7, 9, 8, 0.78) 45%,
+            rgba(7, 9, 8, 0.45) 100%
+        ),
+        var(--country-hero-image);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero::before {
@@ -409,7 +472,6 @@ small {
             transparent 40%
         );
 }
-
 .hero-inner {
     width: min(calc(100% - 40px), var(--max-width));
     margin: 0 auto;
@@ -525,13 +587,10 @@ small {
     width: 100%;
     height: 120%;
 
-    pointer-events: none;
+    object-fit: cover;
+    object-position: center;
 
-    background: radial-gradient(
-        circle at 80% 20%,
-        rgba(0, 173, 159, 0.07),
-        transparent 30%
-    );
+    pointer-events: none;
 
     will-change: transform;
 }
@@ -713,26 +772,31 @@ small {
 .grid {
     display: grid;
     gap: 20px;
+    row-gap: 20px;
 }
 
 .grid--1 {
     grid-template-columns: repeat(1, 1fr);
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .grid--2 {
     grid-template-columns: repeat(2, 1fr);
-    width: 1500px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 .grid--3 {
     grid-template-columns: repeat(3, 1fr);
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 .grid--4 {
     grid-template-columns: repeat(4, 1fr);
+    max-width: 2500px;
+    margin: 0 auto;
 }
 
 .panel {
@@ -1107,6 +1171,29 @@ small {
 
 .reveal:nth-child(6) {
     transition-delay: 1.25s;
+}
+
+.reveal:nth-child(7) {
+    transition-delay: 1.5s;
+}
+
+.reveal:nth-child(8) {
+    transition-delay: 1.75s;
+}
+
+.reveal:nth-child(9) {
+    transition-delay: 2s;
+}
+
+.reveal:nth-child(10) {
+    transition-delay: 2.25s;
+}
+
+.reveal:nth-child(11) {
+    transition-delay: 2.5s;
+}
+.reveal:nth-child(12) {
+    transition-delay: 2.75s;
 }
 
 /* Scrollbar */

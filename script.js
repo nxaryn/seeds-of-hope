@@ -1,5 +1,5 @@
 const hero = document.querySelector(".hero");
-const heroBackground = document.querySelector(".hero-background");
+const heroBackground = document.querySelector(".home-hero-background, " + ".country-hero-background, " + ".challenges-hero-background, " + ".solutions-hero-background");
 
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
