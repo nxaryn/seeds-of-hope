@@ -3,30 +3,68 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Seeds of Hope</title>
+
+        <title>Seeds of Hope | Food Security in Yemen</title>
+
+        <meta
+            name="description"
+            content="Learn about food insecurity in Yemen and how access to food, clean water, and sustainable agriculture can help communities build a more secure future."
+        >
+
+        <meta
+            name="keywords"
+            content="Yemen, food insecurity, food security, hunger, famine, sustainable agriculture, humanitarian aid"
+        >
+
+        <meta name="author" content="Seeds of Hope">
+
+        <meta name="robots" content="index, follow">
+
+        <link rel="canonical" href="https://seedsofhope-noxaryn.web.app/">
+
         <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Seeds of Hope | Food Security in Yemen">
+        <meta
+            property="og:description"
+            content="Raising awareness about food insecurity in Yemen and the challenges communities face in accessing food and sustainable resources."
+        >
+        <meta property="og:url" content="https://seedsofhope-noxaryn.web.app/">
+        <meta property="og:image" content="https://seedsofhope-noxaryn.web.app/assets/icons/seeds-of-hope.png">
+        <meta property="og:site_name" content="Seeds of Hope">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Limelight&family=Playpen+Sans:wght@100..800&display=swap"
+            rel="stylesheet"
+        >
+
         <link rel="stylesheet" href="./styles.css">
     </head>
     <button class="scroll-top" aria-label="Scroll to top">⇑</button>
     <body>
-        <header class="site-header">
-            <nav class="nav-bar" id="nav-bar">
-                <a href="#home" class="logo">
-                    <img src="./assets/icons/seeds-of-hope.png" alt="Seeds of Hope">
-                    <span>Seeds of Hope</span>
-                </a>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="./pages/country.html" class="nav-bar-link">Country</a></li>
-                    <li><a href="./pages/challenges.html" class="nav-bar-link">Challenges</a></li>
-                    <li><a href="./pages/solutions.html" class="nav-bar-link">Solutions</a></li>
-                    <li><a href="./pages/bibliography.html" class="nav-bar-link">Sources</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div class="header-wrapper">
+            <header class="site-header">
+                <nav class="nav-bar" id="nav-bar">
+                    <a href="#home" class="logo">
+                        <img src="./assets/icons/seeds-of-hope.png" alt="Seeds of Hope">
+                        <span>Seeds of Hope</span>
+                    </a>
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="./pages/country.html" class="nav-bar-link">Country</a></li>
+                        <li><a href="./pages/challenges.html" class="nav-bar-link">Challenges</a></li>
+                        <li><a href="./pages/solutions.html" class="nav-bar-link">Solutions</a></li>
+                        <li><a href="./pages/bibliography.html" class="nav-bar-link">Sources</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="header-trigger">
+                <span></span>
+            </div>
+        </div>
         <main id="top">
             <section class="hero" id="hero">
                 <div class="hero-inner">
@@ -119,7 +157,7 @@
                             <path d="M0 10 H250 L260 5 H340 L350 10 H600" />
                         </svg>
                     </div>
-                    <h1 class="section-title">Our Purpose</h1>
+                    <h1 class="section-title">Our <strong>Purpose</strong></h1>
                     <div class="section-p">
                         <p>The purpose of this website is to raise awareness about food insecurity in Yemen. It explains the environmental, economic and political factors that contribute to hunger and examines realistic solutions that could help improve food security.</p>
                     </div>
@@ -130,6 +168,7 @@
                     <path d="M0 20 H450 L480 5 H720 L750 20 H1200" />
                 </svg>
             </div>
+            <div class="footer-wrapper">
             <footer id="site-footer">
                 <div class="section-inner">
                     <div class="footer-top">
@@ -143,7 +182,7 @@
                         <div class="footer-links">
                             <div class="footer-col">
                                 <h4>Creator</h4>
-                                <p>Made by Maksim Zabelov</p>
+                                <p>Made by <strong>Maksim Zabelov</strong></p>
                             </div>
                             <div class="footer-col">
                                 <h4>Contact</h4>
@@ -159,6 +198,7 @@
                         <a href="./legal/terms.html" rel="noopener">TOS</a>
                     </div>
                 </div>
+
                 <button class="nox-mode-toggle" id="nox-mode-toggle" type="button">
                     <span class="nox-mode-icon">NOX</span>
                 </button>
@@ -196,6 +236,7 @@
                     </div>
                 </div>
             </footer>
+            </div>
         </main>
         <script src="./script.js"></script>
     </body>
