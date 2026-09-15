@@ -114,3 +114,39 @@ window.addEventListener("wheel", (event) => {
         showNoxButtonTemporarily();
     }
 });
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+    const summary = item.querySelector("summary");
+    const answer = item.querySelector(".faq-answer");
+
+    summary.addEventListener("click", event => {
+        event.preventDefault();
+
+        if (item.open) {
+            answer.style.height = `${answer.scrollHeight}px`;
+
+            requestAnimationFrame(() => {
+                answer.style.height = "0px";
+            });
+
+            answer.addEventListener("transitionend", () => {
+                item.open = false;
+            }, { once: true });
+
+        } else {
+            item.open = true;
+
+            answer.style.height = "0px";
+
+            requestAnimationFrame(() => {
+                answer.style.height = `${answer.scrollHeight}px`;
+            });
+
+            answer.addEventListener("transitionend", () => {
+                answer.style.height = "auto";
+            }, { once: true });
+        }
+    });
+});
